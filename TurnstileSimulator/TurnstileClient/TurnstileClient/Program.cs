@@ -30,12 +30,12 @@ namespace TurnstileClient
                 var rnd = new Random();
                 Console.Write("Enter a request: ");
                 //string req = Console.ReadLine();
-                byte[] buffer = BitConverter.GetBytes(permitIds[rnd.Next(0, 7)]);
+                var buffer = BitConverter.GetBytes(permitIds[rnd.Next(0, 7)]);
                 _clientSocket.Send(buffer);
 
-                byte[] receifedBuffer = new byte[1024];
-                int rec = _clientSocket.Receive(receifedBuffer);
-                byte[] data = new byte[rec];
+                var receifedBuffer = new byte[1024];
+                var rec = _clientSocket.Receive(receifedBuffer);
+                var data = new byte[rec];
 
                 Array.Copy(receifedBuffer, data, rec);
                 Console.WriteLine(string.Format("Received: {0}", Encoding.ASCII.GetString(data)));

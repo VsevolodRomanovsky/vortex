@@ -26,19 +26,16 @@ namespace TurnstileWcfService
             }
         }
 
-
-
         public bool CheckValidation(int permitId, int enterType)
         {
             using (TurnstileDbEntities te = new TurnstileDbEntities())
             {
-                Visitor visitor = te.Visitors.SingleOrDefault(p => p.PermitId == permitId);
+                var visitor = te.Visitors.SingleOrDefault(p => p.PermitId == permitId);
                 if (visitor == null)
                     return false;
-                else if (!visitor.IsValid)
+                if (!visitor.IsValid)
                     return false;
-                else
-                    return InsertVisit(enterType, visitor.Id);
+                return InsertVisit(enterType, visitor.Id);
             }
 
         }
@@ -52,7 +49,7 @@ namespace TurnstileWcfService
                 VisitType = enterType
 
             };
-            using (TurnstileDbEntities te = new TurnstileDbEntities())
+            using (var te = new TurnstileDbEntities())
             {
                 te.Visits.Add(visit);
                 te.SaveChanges();

@@ -1,0 +1,1 @@
+!function(){"use strict";angular.module("myQuotesApp",["quotesServi ce"])}(),function(){"use strict";function a(a,b){a.quotes=b.query()}angular.module("myQuotesApp",[]).controller("quotesController",a),a.$inject=["$scope","Quotes"]}();
