@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnstileCodeFirst", "TurnstileCodeFirst\TurnstileCodeFirst.csproj", "{F540F8CC-5D8E-4B28-A12A-6D142CE48B29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnstileServer", "..\TurnstileServer\TurnstileServer\TurnstileServer.csproj", "{2F465A00-890A-4360-9B6B-A4CB4CFA0493}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3B7B670-23B1-420D-ACED-D0481ACBF731} = {F3B7B670-23B1-420D-ACED-D0481ACBF731}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnstileClient", "..\TurnstileClient\TurnstileClient\TurnstileClient.csproj", "{9A6CDC2F-EE65-4279-9617-6BFE335C2D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnstileWcfService", "..\TurnstileWcfService\TurnstileWcfService\TurnstileWcfService.csproj", "{F3B7B670-23B1-420D-ACED-D0481ACBF731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnstileObserver", "..\TurnstileObserver\TurnstileObserver\TurnstileObserver.csproj", "{C42683CA-E49C-442D-8E44-73AAC66855C4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3B7B670-23B1-420D-ACED-D0481ACBF731} = {F3B7B670-23B1-420D-ACED-D0481ACBF731}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F540F8CC-5D8E-4B28-A12A-6D142CE48B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F540F8CC-5D8E-4B28-A12A-6D142CE48B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F540F8CC-5D8E-4B28-A12A-6D142CE48B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F540F8CC-5D8E-4B28-A12A-6D142CE48B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F465A00-890A-4360-9B6B-A4CB4CFA0493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F465A00-890A-4360-9B6B-A4CB4CFA0493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F465A00-890A-4360-9B6B-A4CB4CFA0493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F465A00-890A-4360-9B6B-A4CB4CFA0493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6CDC2F-EE65-4279-9617-6BFE335C2D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6CDC2F-EE65-4279-9617-6BFE335C2D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6CDC2F-EE65-4279-9617-6BFE335C2D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6CDC2F-EE65-4279-9617-6BFE335C2D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B7B670-23B1-420D-ACED-D0481ACBF731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B7B670-23B1-420D-ACED-D0481ACBF731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B7B670-23B1-420D-ACED-D0481ACBF731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B7B670-23B1-420D-ACED-D0481ACBF731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42683CA-E49C-442D-8E44-73AAC66855C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42683CA-E49C-442D-8E44-73AAC66855C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42683CA-E49C-442D-8E44-73AAC66855C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42683CA-E49C-442D-8E44-73AAC66855C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
