@@ -21,14 +21,13 @@ namespace TurnstileWcfService
             using (var te = new TurnstileDbEntities())
             {
                 te.Configuration.ProxyCreationEnabled = false;
-                var tt = te.Visitors.Include("Visits").ToList();
                 return te.Visitors.Include("Visits").ToList();
             }
         }
 
         public bool CheckValidation(int permitId, int enterType)
         {
-            using (TurnstileDbEntities te = new TurnstileDbEntities())
+            using (var te = new TurnstileDbEntities())
             {
                 var visitor = te.Visitors.SingleOrDefault(p => p.PermitId == permitId);
                 if (visitor == null)
