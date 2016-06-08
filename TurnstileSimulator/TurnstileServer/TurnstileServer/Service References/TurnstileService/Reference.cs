@@ -205,9 +205,6 @@ namespace TurnstileServer.TurnstileService {
         private int VisitTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TurnstileServer.TurnstileService.Visitor VisitorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> Visitor_IdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -260,19 +257,6 @@ namespace TurnstileServer.TurnstileService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TurnstileServer.TurnstileService.Visitor Visitor {
-            get {
-                return this.VisitorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.VisitorField, value) != true)) {
-                    this.VisitorField = value;
-                    this.RaisePropertyChanged("Visitor");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> Visitor_Id {
             get {
                 return this.Visitor_IdField;
@@ -300,10 +284,10 @@ namespace TurnstileServer.TurnstileService {
     public interface IServiceVisit {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceVisit/CheckValidation", ReplyAction="http://tempuri.org/IServiceVisit/CheckValidationResponse")]
-        bool CheckValidation(int PermitId, int EnterType);
+        bool CheckValidation(int permitId, int enterType);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceVisit/CheckValidation", ReplyAction="http://tempuri.org/IServiceVisit/CheckValidationResponse")]
-        System.Threading.Tasks.Task<bool> CheckValidationAsync(int PermitId, int EnterType);
+        System.Threading.Tasks.Task<bool> CheckValidationAsync(int permitId, int enterType);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceVisit/AllVisitors", ReplyAction="http://tempuri.org/IServiceVisit/AllVisitorsResponse")]
         TurnstileServer.TurnstileService.Visitor[] AllVisitors();
@@ -339,12 +323,12 @@ namespace TurnstileServer.TurnstileService {
                 base(binding, remoteAddress) {
         }
         
-        public bool CheckValidation(int PermitId, int EnterType) {
-            return base.Channel.CheckValidation(PermitId, EnterType);
+        public bool CheckValidation(int permitId, int enterType) {
+            return base.Channel.CheckValidation(permitId, enterType);
         }
         
-        public System.Threading.Tasks.Task<bool> CheckValidationAsync(int PermitId, int EnterType) {
-            return base.Channel.CheckValidationAsync(PermitId, EnterType);
+        public System.Threading.Tasks.Task<bool> CheckValidationAsync(int permitId, int enterType) {
+            return base.Channel.CheckValidationAsync(permitId, enterType);
         }
         
         public TurnstileServer.TurnstileService.Visitor[] AllVisitors() {

@@ -4,8 +4,8 @@
   <xs:element name="CheckValidation">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="PermitId" type="xs:int" />
-        <xs:element minOccurs="0" name="EnterType" type="xs:int" />
+        <xs:element minOccurs="0" name="permitId" type="xs:int" />
+        <xs:element minOccurs="0" name="enterType" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

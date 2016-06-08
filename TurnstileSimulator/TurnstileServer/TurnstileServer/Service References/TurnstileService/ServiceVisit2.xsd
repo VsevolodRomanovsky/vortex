@@ -31,7 +31,6 @@
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="VisitType" type="xs:int" />
-      <xs:element minOccurs="0" name="Visitor" nillable="true" type="tns:Visitor" />
       <xs:element minOccurs="0" name="Visitor_Id" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>

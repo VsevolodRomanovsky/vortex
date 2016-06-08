@@ -8,10 +8,15 @@ namespace TurnstileClient
 {
     class Program
     {
-        private static Socket _clientSocket = new Socket
-                                             (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private static Socket _clientSocket;
 
-        static void Main(string[] args)
+
+        static Program()
+        {
+            _clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        }
+
+        public static void Main()
         {
             Console.Title = "Visitor";
             LoopConnect();
@@ -38,7 +43,7 @@ namespace TurnstileClient
                 var data = new byte[rec];
 
                 Array.Copy(receifedBuffer, data, rec);
-                Console.WriteLine(string.Format("Received: {0}", Encoding.ASCII.GetString(data)));
+                Console.WriteLine($"Received: {Encoding.ASCII.GetString(data)}");
             }
         }
 
@@ -56,7 +61,7 @@ namespace TurnstileClient
                 catch (SocketException)
                 {
                     Console.Clear();
-                    Console.WriteLine(string.Format("Connection attempts: {0}", attempts));
+                    Console.WriteLine($"Connection attempts: {attempts}");
                 }
             }
             Console.Clear();
